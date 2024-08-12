@@ -1,5 +1,15 @@
 #!/bin/bash
 
+########
+# Author: Emmanuel Kariithi
+# Date: 12-08-2024
+#
+# Version: v1
+#
+# Installation script for CloudUploader
+#
+########
+
 # Define destination path
 DESTINATION="/usr/local/bin/clouduploader"
 
