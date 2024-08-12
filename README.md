@@ -85,6 +85,70 @@ After uploading, the tool generates a pre-signed URL that is valid for 1 hour:
 Here is a shareable link valid for 1 hour: https://yourbucket.s3.amazonaws.com/yourfile.txt?....
 ```
 
+## Distribution
+
+### Installation
+To make CloudUploader easily accessible from anywhere in your terminal, you can install it by following these steps:
+
+#### Method 1: Automated Installation
+
+1. Make the installation script executable:
+    ```bash
+    chmod +x ./install.sh
+    ```
+2. Run the provided installation script:
+    ```bash
+    ./install.sh
+    ```
+3. The script will install CloudUploader to `/usr/local/bin`, making it accessible globally.
+
+#### Method 2: Manual Installation
+
+1. Copy the script to a directory in your `$PATH`, such as `/usr/local/bin`:
+    ```bash
+    sudo cp clouduploader.sh /usr/local/bin/clouduploader
+    ```
+2. Make the script executable:
+    ```bash
+    sudo chmod +x /usr/local/bin/clouduploader
+    ```
+3. Run the script from anywhere using:
+    ```bash
+    clouduploader
+    ```
+
+After installation, you can use `clouduploader` from anywhere in your terminal.
+
+### Uninstallation
+
+If you need to remove CloudUploader from your system, follow these steps:
+
+#### Method 1: Automated Uninstallation
+
+1. Make the uninstallation script executable:
+    ```bash
+    chmod +x ./uninstall.sh
+    ``` 
+2. Run the provided uninstallation script:
+    ```bash
+    ./uninstall.sh
+    ```
+3. The script will remove CloudUploader from `/usr/local/bin`.
+
+#### Method 2: Manual Uninstallation
+
+1. Remove the script from `/usr/local/bin` (or the directory where you installed it):
+    ```bash
+    sudo rm /usr/local/bin/clouduploader
+    ```
+2. Verify that the script has been removed:
+    ```bash
+    which clouduploader
+    ```
+- If no path is returned, the uninstallation was successful.
+
+After uninstallation, the `clouduploader` command will no longer be available in your terminal.
+
 ## Troubleshooting
 ### Common Issues
 - **AWS CLI not found**: Ensure the AWS CLI is installed and correctly configured.
