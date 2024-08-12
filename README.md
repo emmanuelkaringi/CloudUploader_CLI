@@ -1,6 +1,8 @@
 # CloudUploader
 **A Simple CLI Tool for Uploading Files to AWS S3.**
 
+![Cover Image](https://github.com/emmanuelkaringi/CloudUploader_CLI/blob/main/cover.jpeg)
+
 ## Overview
 
 **CloudUploader** is a lightweight, bash-based command-line tool designed to streamline the process of uploading files to AWS S3. The tool offers an intuitive interface, allowing users to manage existing files on S3 with options to overwrite, skip, or rename. Additionally, it generates a pre-signed URL, making it easy to share your files securely.
@@ -16,7 +18,7 @@ Before using CloudUploader, ensure you have the following installed and configur
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone git@github.com:emman/CloudUploader_CLI.git
+    git clone git@github.com:emmanuelkaringi/CloudUploader_CLI.git
     ```
 2. Navigate to the directory:
     ```bash
