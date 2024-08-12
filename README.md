@@ -3,22 +3,22 @@
 
 ## Overview
 
-**CloudUploader** is a bash-based command-line tool that allows users to upload files to AWS S3 quickly. It provides a seamless upload experience with options to overwrite, skip, or rename files, and it can even generate a shareable link after uploading.
+**CloudUploader** is a lightweight, bash-based command-line tool designed to streamline the process of uploading files to AWS S3. The tool offers an intuitive interface, allowing users to manage existing files on S3 with options to overwrite, skip, or rename. Additionally, it generates a pre-signed URL, making it easy to share your files securely.
 
 ## Prerequisites
 
-Before using CloudUploader, ensure you have the following installed:
+Before using CloudUploader, ensure you have the following installed and configured:
 
-- **AWS CLI** - Make sure the AWS CLI is installed and configured with your credentials.
+- **AWS CLI** - Make sure the AWS CLI is installed and configured with your credentials. It is required for interacting with AWS S3 and AWS as a whole.
 - **Bash Shell** - The script is written for a bash environment.
 - **pv (Pipe Viewer)** - Used for showing upload progress.
 
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone git@github.com:emmanuelkaringi/CloudUploader_CLI.git
+    git clone git@github.com:emman/CloudUploader_CLI.git
     ```
-2. Change to the directory:
+2. Navigate to the directory:
     ```bash
     cd CloudUploader_CLI
     ```
@@ -36,9 +36,8 @@ Before using CloudUploader, ensure you have the following installed:
     ```bash
     aws configure
     ```
-6. Create an S3 bucket via the `AWS Console` or `AWS CLI`:
-
-    https://www.youtube.com/watch?v=e6w9LwZJFIA
+6. Create an S3 bucket:
+    - You can create an S3 bucket using the AWS Console or AWS CLI. Watch this [video tutorial](https://www.youtube.com/watch?v=e6w9LwZJFIA) if you're new to this process.
 
 7. Make the script file executable:
     ```bash
@@ -48,19 +47,25 @@ Before using CloudUploader, ensure you have the following installed:
 Basic Command
 To upload a file to S3:
 ```bash
-./clouduploader.sh /path/to/your/file.txt
+./clouduploader.sh
 ```
 ## Options
-- **Overwrite**: Replace an existing file in S3 with the new file.
-- **Skip**: Do not upload the file if it already exists in S3.
+- **Overwrite**: Replace an existing file in S3 bucket with the new file.
+- **Skip**: Do not upload the file if it already exists in the S3 Bucket.
 - **Rename**: Upload the file with a new name, preserving the original extension.
 
 **Examples**
 
 ### Upload a File
 ```bash
-./clouduploader.sh /home/user/Downloads/lava.png
+./clouduploader.sh
 ```
+When prompted, provide the necessary details:
+
+1. S3 bucket name
+2. Optional target directory
+3. File path
+
 ### Rename and Upload
 If the file already exists:
 
@@ -83,6 +88,6 @@ Here is a shareable link valid for 1 hour: https://yourbucket.s3.amazonaws.com/y
 ## Troubleshooting
 ### Common Issues
 - **AWS CLI not found**: Ensure the AWS CLI is installed and correctly configured.
-- **Permission denied**: Make sure you have execute permissions for clouduploader.sh.
+- **Permission denied**: Make sure you have execute permissions for `clouduploader.sh`.
 - **File not found**: Double-check the file path and ensure it exists.
 - **Upload failed**: Verify your internet connection and AWS S3 permissions.
